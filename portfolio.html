@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--控制網頁以響應式的方式呈現，即使在不同設備上，可視區域仍能獲得最佳展示，無需手動縮放或滾動来查看完整的内容，提供更好的用户體驗。-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <!--使用<style>標籤來引入CSS-->
+        <style>
+            body{
+                margin:0px;
+                font-family:微軟正黑體;
+                overflow-y: scroll;
+            }
+            .topnav{
+                height:122px;
+                background-color:white;
+                display:flex;
+                align-items:center;
+                justify-content:flex-start;
+                border-bottom:solid 3px black;
+            }
+            .name{
+                margin:12px 12px 12px 24px;
+                width:80%;
+                font-size:46px;
+                font-weight:bold;
+            }
+            .topmenu{
+                display:flex;
+                width:60%;
+                justify-content:flex-end;
+               
+            }
+            .menu{
+                font-size:22px;
+                margin:12px 42px 12px 12px;    
+            }
+            .m2{
+                margin-right:52px;
+            }
+            .title{
+                font-size:28px;font-weight:bold;
+                margin-left:40px;
+                margin-top:46px;
+            }
+            .workline{
+                width:100%;
+                height:auto;
+                display:flex;
+                justify-content:space-evenly;
+                margin:32px 0px 32px 0px;
+                flex-wrap:wrap;
+            }
+            .workline img{
+            width:30%;
+            height:30%;
+            margin-bottom:42px;
+            }
+
+
+            #menu:hover{
+                font-weight:bold;
+            }
+
+
+
+            @media (max-width:1024px){ /*螢幕小於1024px時，會進行以下的變動*/
+            .topnav{
+                height:100px;
+                }
+            .name{
+                margin:12px 12px 12px 24px;
+                width:80%;
+                font-size:36px;
+                }
+            .menu{
+                font-size:18px;
+                margin:12px 42px 12px 12px;    
+                }
+            .title{
+                font-size:24px;font-weight:bold;
+                margin-left:32px;
+                margin-top:40px;
+            }
+            .workline{
+                margin:28px 0px 28px 0px;
+            }
+            .workline img{
+            width:30%;
+            height:30%;
+            margin-bottom:28px;
+            }
+        }
+
+
+            @media (max-width:768px){ /*螢幕小於768px時，會進行以下的變動*/
+            .topnav{
+                height:80px;
+                border-bottom:solid 2px black;
+                }
+            .name{
+                margin:12px 6px 12px 24px;
+                width:40%;
+                font-size:30px;
+                }
+            .menu{
+                font-size:14px;
+                margin:12px 42px 12px 0px;    
+                }
+            .title{
+                font-size:20px;
+                margin-left:24px;
+                margin-top:32px;
+                }
+            .workline{
+                margin:28px 0px 38px 0px;
+            }
+            .workline img.work9{
+                width:90%;
+                height:90%;
+            }
+            .workline img{
+            width:44%;
+            height:44%;
+            margin-bottom:20px;
+            }
+            }
+            
+            @media (max-width:320px){ /*螢幕小於320px時，會進行以下的變動*/
+            .topnav{
+                height:60px;
+                border-bottom:solid 2px black;
+                }
+            .name{
+                margin:12px 6px 12px 24px;
+                width:30%;
+                font-size:24px;
+                }
+            .menu{
+                font-size:10px;
+                margin:8px 24px 8px 2px;    
+                }
+            .title{
+                font-size:14px;
+                margin-left:18px;
+                margin-top:24px;
+            }
+            .workline{
+                margin:28px 0px 38px 0px;
+            }
+            .workline img{
+            width:90%;
+            height:90%;
+            margin-bottom:20px;
+            }
+
+            }
+
+        </style>
+        <!--使用<script>標籤來引入JavaScript-->
+        <script>
+            //宣告一個變數用來儲存原始圖片之路徑
+            var originalimg;
+            
+            //定義函式show()，用於切換圖片，參數img及newImg則對應到每一張圖片之show函式裡的this(work1~9),'pic/show(1~9).png'
+            function show(img,newImg){
+                //將原始圖片路徑(img.src)儲存在剛剛宣告的originalimg變數之中
+                originalimg = img.src;
+                //將原始圖片路徑(img.src)替換為新圖片
+                img.src = newImg;
+                
+            }
+            //定義函式back()，用於返回原始圖片，參數img則對應到每一張圖片之back函式裡的this(pic/work1~9)
+            function back(img){
+                //將已執行完show函示、已經替換為新圖片路徑的img.src再變回原始圖片，也就是一開始宣告拿來儲存原始圖片的originalimg
+                img.src = originalimg;
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+        <div class="topnav">
+            <!--使用JavaScript的DOM(Document Object Model)，對Window和其属性Location的操作，將目前頁面導向到指定的URL(回到首頁)-->
+            <div class="name" onclick="javascript:window.location.href='./Homepage.html'">Lily</div>
+            <div class="topmenu">
+                <div class="menu m1" id="menu">作品集</div>
+                <!--使用JavaScript的DOM(Document Object Model)，對Window和其属性Location的操作，將目前頁面導向到指定的URL(到關於我)-->
+                <div class="menu m2" id="menu" onclick="javascript:window.location.href='./aboutme.html'">關於我</div>
+            </div>
+        </div>
+        <div class="title">· 作品集</div>
+        <div class="workline">
+            <!--滑鼠移入圖片時，呼叫show();函式，並且代入this(work1~9)及show(1~9)的參數-->
+            <img src="pic/work1.png" onmouseover="show(this,'pic/show1.png');" onmouseout="back(this);">
+            <img src="pic/work2.png" onmouseover="show(this,'pic/show2.png');" onmouseout="back(this);">
+            <img src="pic/work3.png" onmouseover="show(this,'pic/show3.png');" onmouseout="back(this);">
+            <img src="pic/work4.png" onmouseover="show(this,'pic/show4.png');" onmouseleave="back(this);">
+            <img src="pic/work5.png" onmouseover="show(this,'pic/show5.png');" onmouseleave="back(this);">
+            <img src="pic/work7.png" onmouseover="show(this,'pic/show7.png');" onmouseleave="back(this);">
+            <img src="pic/work6.png" onmouseover="show(this,'pic/show6.png');" onmouseleave="back(this);">
+            <img src="pic/work8.png" onmouseover="show(this,'pic/show8.png');" onmouseleave="back(this);">
+            <img src="pic/work9.png" onmouseover="show(this,'pic/show9.png');" onmouseleave="back(this);">
+        </div>
+    </body>
+</html>
