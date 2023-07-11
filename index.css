@@ -1,0 +1,381 @@
+hr{
+    border:3px;
+    position:relative;top:440px;
+}
+body{
+    margin:0px;
+    font-family:微軟正黑體;
+    overflow-y: scroll;
+}
+.topnav{
+    height:122px;
+    width:100%;
+    background-color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-bottom:solid 3px black;
+}
+.name{
+    margin:12px 12px 12px 24px;
+    width:80%;
+    font-size:46px;
+    font-weight:bold;
+}
+.topmenu{
+    display:flex;
+    width:60%;
+    justify-content:flex-end;
+   
+}
+.menu{
+    font-size:22px;
+    margin:12px 42px 12px 12px;    
+}
+.m2{
+    margin-right:52px;
+}
+.banner{
+    width:100%;
+}
+.title{
+    display:flex;
+    margin-right:62px;
+    margin-left:62px;
+    align-items:center;
+}
+.pic{
+    width:22%; height:22%;
+    margin-left:42px;
+    padding:52px 112px 52px 42px;
+}
+.titleword{
+    font-size:32px;font-weight:normal;
+    line-height:180%;
+}
+.work{
+    width:100%;
+    height:452px;
+    display:flex;
+    overflow-x: scroll;
+    flex-direction: row;
+    margin:82px 0px 82px 0px;
+}
+.work img{
+    flex:auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin:0px 20px 0px 42px;
+}
+.underline{
+    height:3px;
+    background-color:black;
+    margin-right:62px;
+    margin-left:62px;
+}
+.aboutme{
+    margin:102px 62px 62px 0px;
+    border-top:solid 3px black;
+    background-color:black;
+    padding:62px 62px 62px 62px;
+    opacity:0.85;
+    width:72%;
+}
+.title2{
+    font-size:32px;font-weight:bold;color:white;
+    margin-left:24px;
+}
+.content{
+    margin:62px 42px 0px 304px;
+    font-size:22px;color:white;
+    line-height:260%;
+}
+.more{
+    margin-left:100%;
+    margin-top:-12px;
+    background-color:#565656;
+    padding:8px 36px 8px 24px;
+    width:100px;
+    font-size:24px;font-weight:bold;color:white;
+}
+.contact{
+    margin:62px 0px 24px 0px;
+    padding-right:24px;
+    display:flex;
+    justify-content:flex-end;
+   
+}
+.phone{
+    font-size:26px;font-weight:bold;
+    padding-right:12px;
+}
+.mail{
+    align-self:center;
+    margin-top:8px;
+    padding-left:24px;
+}
+.mailadress{
+    padding-left:12px;
+    font-size:17px;
+}
+.line{
+    width:100%;height:20px;
+    background-color:black;
+}
+
+#menu:hover{
+    font-weight:bold;
+}
+
+
+
+@media (max-width:1024px){ /*螢幕小於1024px時，會進行以下的變動*/
+.topnav{
+    height:100px;
+    }
+.name{
+    margin:12px 12px 12px 24px;
+    font-size:36px;
+    }
+.menu{
+    font-size:18px;
+    margin:12px 42px 12px 12px;    
+    }
+.title{
+    margin-right:36px;
+    margin-left:36px;
+}
+.titleword{
+    font-size:26px;
+    line-height:140%;
+    }
+.content{
+    margin-left:280px;
+    margin-top:62px;
+    font-size:24px;
+    line-height:260%;
+    }
+.work{
+    height:290px;
+    margin:56px 0px 56px 0px;
+    }
+.work img{
+    margin:0px 12px 0px 32px;
+}
+.aboutme{
+    margin:82px 42px 42px 0px;
+    padding:42px 42px 42px 42px;
+    width:72%;
+}
+.title2{
+    font-size:26px;
+    margin-left:24px;
+}
+.content{
+    margin:42px 32px 0px 180px;
+    font-size:18px;
+    line-height:240%;
+}
+.more{
+    margin-left:98%;
+    margin-top:-12px;
+    padding:8px 24px 8px 20px;
+    width:80px;
+    font-size:20px;
+}
+.pic{
+    padding:42px 66px 42px 12px;
+}
+.contact{
+    margin:42px 0px 20px 0px;
+    padding:20px;
+}
+.phone{
+    font-size:22px;
+    padding-right:10px;
+}
+.number{
+    font-size:14px;
+}
+.mail{
+    padding-left:20px;
+}
+.mail img{
+    width:22px;
+}
+.mailadress{
+    padding-left:10px;
+    font-size:15px;
+    
+}
+
+}
+
+@media (max-width:768px){ /*螢幕小於768px時，會進行以下的變動*/
+.topnav{
+    height:80px;
+    border-bottom:solid 2px black;
+    }
+.name{
+    margin:12px 6px 12px 24px;
+    width:40%;
+    font-size:30px;
+    font-weight:bold;
+    }
+.menu{
+    font-size:14px;
+    margin:12px 42px 12px 0px;    
+    }
+.title{
+    margin-right:32 px;
+    margin-left:32px;
+}
+.titleword{
+    padding:13px;
+    font-size:18px;
+    line-height:160%;
+    }
+.work{
+    height:200px;
+    margin:32px 14px 32px 14px;
+    }
+.work img{
+    margin:4px 14px 4px 0px;
+    }
+.aboutme{
+    margin:62px 0px 22px 0px;
+    padding:28px 22px 22px 12px;
+    width:80%;
+}
+.title2{
+    font-size:22px;
+    margin-left:14px;
+}
+.content{
+    margin:22px 12px 0px 110px;
+    font-size:16px;
+    line-height:210%;
+}
+.more{
+    margin-left:96%;
+    margin-top:-12px;
+    padding:6px 0px 6px 18px;
+    width:80px;
+    font-size:18px;
+}
+.pic{
+    width:24%; height:24%;
+    margin-left:22px;
+    padding:32px 36px 32px 4px;
+}
+.contact{
+    margin:32px 0px 10px 0px;
+    padding-right:10px;
+}
+.phone{
+    font-size:16px;
+    padding-right:8px;
+}
+.number{
+    font-size:12px;
+}
+.mail{
+    padding-left:16px;
+}
+.mail img{
+    width:16px;
+}
+.mailadress{
+    padding-left:8px;
+    font-size:12px;
+}
+.underline{
+    height:2px;
+    margin-right:32px;
+    margin-left:32px;
+}
+}
+
+@media (max-width:320px){ /*螢幕小於320px時，會進行以下的變動*/
+.topnav{
+    height:60px;
+    border-bottom:solid 2px black;
+    }
+.name{
+    margin:12px 6px 12px 24px;
+    width:30%;
+    font-size:24px;
+    }
+.menu{
+    font-size:10px;
+    margin:8px 24px 8px 2px;    
+    }
+.title{
+    margin-right:22px;
+    margin-left:22px;
+}
+.titleword{
+    padding:8px;
+    font-size:13px;
+    line-height:140%;
+    }
+.work{
+    height:120px;
+    margin:24px 6px 24px 6px;
+    }
+.work img{
+    margin:4px 10px 4px 0px;
+    }
+.underline{
+    height:2px;
+    margin-right:24px;
+    margin-left:24px;
+}
+.aboutme{
+    margin:32px 12px 12px 0px;
+    padding:22px 16px 10px 6px;
+    width:78%;
+}
+.title2{
+    font-size:14px;
+    margin-left:8px;
+}
+.content{
+    margin:12px 8px 0px 60px;
+    font-size:11px;
+    line-height:200%;
+}
+.more{
+    margin-left:94%;
+    margin-top:-8px;
+    padding:3px 0px 3px 12px;
+    width:60px;
+    font-size:14px;
+}
+.pic{
+    width:24%; height:24%;
+    margin-left:0px;
+    padding:16px 14px 16px 4px;
+}
+.contact{
+    margin:24px 0px 6px 0px;
+    padding-right:8px;
+}
+.phone{
+    font-size:6px;
+    padding-right:2px;
+}
+.number{
+    font-size:6px;
+}
+.mail{
+    padding-left:12px;
+}
+.mail img{
+    width:14px;
+}
+.mailadress{
+    font-size:6px;
+    padding-left:2px;
+}
+}
