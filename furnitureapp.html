@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--控制網頁以響應式的方式呈現，即使在不同設備上，可視區域仍能獲得最佳展示，無需手動縮放或滾動来查看完整的内容，提供更好的用户體驗。-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <!--使用<style>標籤來引入CSS-->
+        <style>
+            body{
+            margin:0px;
+            font-family:微軟正黑體;
+            overflow-y: scroll;
+            }
+            .topnav{
+                height:122px;
+                background-color:white;
+                display:flex;
+                align-items:center;
+                justify-content:flex-start;
+                border-bottom:solid 3px black;
+            }
+            .name{
+                margin:12px 12px 12px 24px;
+                width:80%;
+                font-size:46px;
+                font-weight:bold;
+            }
+            .topmenu{
+                display:flex;
+                width:60%;
+                justify-content:flex-end;
+            
+            }
+            .menu{
+                font-size:22px;
+                margin:12px 42px 12px 12px;    
+            }
+            .m2{
+                margin-right:52px;
+            }
+            .title{
+                font-size:28px;font-weight:bold;
+                margin-left:40px;
+                margin-top:46px;
+            }
+            .image{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                margin-top:46px;
+            }
+            .img{
+                width:66%;
+            }
+            .img2{
+                flex:none;
+                width:66%;
+                
+                margin-top:42px;
+            }
+            .content{
+                font-size:22px;
+                line-height:220%; 
+                margin:46px 200px 52px 200px;
+            }
+            .img3{
+                width:34%;
+            }
+            .img4{
+                width:34%;
+                margin-left:18px;
+            }
+            #menu:hover{
+                font-weight:bold;
+            }
+
+
+
+        @media (max-width:1024px){ /*螢幕小於1024px時，會進行以下的變動*/
+            .topnav{
+                height:100px;
+                }
+            .name{
+                margin:12px 12px 12px 24px;
+                width:80%;
+                font-size:36px;
+                }
+            .menu{
+                font-size:18px;
+                margin:12px 42px 12px 12px;    
+                }
+            .title{
+                font-size:24px;font-weight:bold;
+                margin-left:32px;
+                margin-top:40px;
+            }
+            .image{
+                margin-top:40px;
+            }
+            .img2{
+                margin-top:36px;
+            }
+            .content{
+                font-size:20px;
+                line-height:190%; 
+                margin:40px 140px 46px 140px;
+            }
+            .img4{
+                margin-left:16px;
+            }
+            }
+
+
+        @media (max-width:768px){ /*螢幕小於768px時，會進行以下的變動*/
+            .topnav{
+                height:80px;
+                border-bottom:solid 2px black;
+                }
+            .name{
+                margin:12px 6px 12px 24px;
+                width:40%;
+                font-size:30px;
+                }
+            .menu{
+                font-size:14px;
+                margin:12px 42px 12px 0px;    
+                }
+            .title{
+                font-size:20px;
+                margin-left:24px;
+                margin-top:32px;
+                }
+            .image{
+                margin-top:28px;
+            }
+            .img{
+                width:75%;
+            }
+            .img2{
+                margin-top:28px;
+                width:75%;
+                }
+            .content{
+                font-size:16px;
+                line-height:180%; 
+                margin:36px 68px 42px 68px;
+                }
+            .img4{
+                margin-left:14px;
+                }
+            }
+    
+        @media (max-width:320px){ /*螢幕小於320px時，會進行以下的變動*/
+            .topnav{
+                height:60px;
+                border-bottom:solid 2px black;
+                }
+            .name{
+                margin:12px 6px 12px 24px;
+                width:30%;
+                font-size:24px;
+                }
+            .menu{
+                font-size:10px;
+                margin:8px 24px 8px 2px;    
+                }
+            .image{
+                margin-top:20px;
+                }
+            .title{
+                font-size:14px;
+                margin-left:18px;
+                margin-top:20px;
+                }
+            .img2{
+                margin-top:12px;
+                }
+            .content{
+                font-size:12px;
+                line-height:160%; 
+                margin:12px 30px 12px 30px;
+                }
+            .img4{
+                margin-left:10px;
+                }
+            }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <!--使用JavaScript的DOM(Document Object Model)，對Window和其属性Location的操作，將目前頁面導向到指定的URL(回到首頁)-->
+        <div class="name" onclick="javascript:window.location.href='./index.html'">Lily</div>
+        <div class="topmenu">
+            <div class="menu m1" id="menu" onclick="javascript:window.location.href='./portfolio.html'">作品集</div>
+            <!--使用JavaScript的DOM(Document Object Model)，對Window和其属性Location的操作，將目前頁面導向到指定的URL(到關於我)-->
+            <div class="menu m2" id="menu" onclick="javascript:window.location.href='./aboutme.html'">關於我</div>
+        </div>
+    </div>
+    <div class="title">· UI設計-家具app</div>
+    <div class="image">
+        <img class="img" src="pic/furnitureapp.png">
+        <img class="img2" src="pic/furnitureapp2.png">
+    </div>
+    <div class="content">這是我的第一份UI設計，因此在設計過程中遇到了許多問題，導致修改時花費了很多的時間，例如：忘記將元素製作成Component、沒有命名的習慣等等。
+        最初在導航列的圖示上，我設計了當用戶點擊時會返回Landing page，但朋友操作後的回饋是「有點麻煩，不夠直觀」，每次點擊圖示後都需要再往上拉、點擊選單才能回到首頁，所以我馬上做出了修正。</div>
+    <div class="image">
+            <img class="img3" src="pic/furnitureapp3.png">
+            <img class="img4" src="pic/furnitureapp4.png">
+    </div>
+</body>
+</html>
