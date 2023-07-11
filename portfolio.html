@@ -143,7 +143,7 @@
             .title{
                 font-size:14px;
                 margin-left:18px;
-                margin-top:24px;
+                margin-top:20px;
             }
             .workline{
                 margin:28px 0px 38px 0px;
@@ -175,7 +175,9 @@
                 //將已執行完show函示、已經替換為新圖片路徑的img.src再變回原始圖片，也就是一開始宣告拿來儲存原始圖片的originalimg
                 img.src = originalimg;
             }
-
+            function change(page){
+                window.location.href = page;
+            }
         </script>
 
     </head>
@@ -193,15 +195,15 @@
         <div class="title">· 作品集</div>
         <div class="workline">
             <!--滑鼠移入圖片時，呼叫show();函式，並且代入this(work1~9)及show(1~9)的參數-->
-            <img src="pic/work1.png" onmouseover="show(this,'pic/show1.png');" onmouseout="back(this);">
-            <img src="pic/work2.png" onmouseover="show(this,'pic/show2.png');" onmouseout="back(this);">
-            <img src="pic/work3.png" onmouseover="show(this,'pic/show3.png');" onmouseout="back(this);">
-            <img src="pic/work4.png" onmouseover="show(this,'pic/show4.png');" onmouseleave="back(this);">
-            <img src="pic/work5.png" onmouseover="show(this,'pic/show5.png');" onmouseleave="back(this);">
-            <img src="pic/work7.png" onmouseover="show(this,'pic/show7.png');" onmouseleave="back(this);">
-            <img src="pic/work6.png" onmouseover="show(this,'pic/show6.png');" onmouseleave="back(this);">
-            <img src="pic/work8.png" onmouseover="show(this,'pic/show8.png');" onmouseleave="back(this);">
-            <img src="pic/work9.png" onmouseover="show(this,'pic/show9.png');" onmouseleave="back(this);">
+            <img src="pic/work1.png" onmouseover="show(this,'pic/show1.png');" onmouseout="back(this);" onclick="change('./furnitureapp.html');">
+            <img src="pic/work2.png" onmouseover="show(this,'pic/show2.png');" onmouseout="back(this);" onclick="change('./website.html');">
+            <img src="pic/work3.png" onmouseover="show(this,'pic/show3.png');" onmouseout="back(this);" onclick="change('./illustration.html');">
+            <img src="pic/work4.png" onmouseover="show(this,'pic/show4.png');" onmouseleave="back(this);" onclick="change('./idcard.html');">
+            <img src="pic/work5.png" onmouseover="show(this,'pic/show5.png');" onmouseleave="back(this);" onclick="change('./fashionbook.html');">
+            <img src="pic/work7.png" onmouseover="show(this,'pic/show7.png');" onmouseleave="back(this);" onclick="change('./icon.html');">
+            <img src="pic/work6.png" onmouseover="show(this,'pic/show6.png');" onmouseleave="back(this);" onclick="change('./redenvelope.html');">
+            <img src="pic/work8.png" onmouseover="show(this,'pic/show8.png');" onmouseleave="back(this);" onclick="change('./blanket.html');">
+            <img src="pic/work9.png" onmouseover="show(this,'pic/show9.png');" onmouseleave="back(this);" onclick="change('./valentine.html');">
         </div>
     </body>
 </html>
