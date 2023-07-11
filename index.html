@@ -3,25 +3,19 @@
     <head>
         <meta charset="utf-8">
         <!--控制網頁以響應式的方式呈現，即使在不同設備上，可視區域仍能獲得最佳展示，無需手動縮放或滾動来查看完整的内容，提供更好的用户體驗。-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <!--使用<style>標籤來引入CSS-->
         <style>
-            hr{
-                border:3px;
-                position:relative;top:440px;
-            }
             body{
                 margin:0px;
                 font-family:微軟正黑體;
-                overflow-y: scroll;
             }
             .topnav{
                 height:122px;
-                width:100%;
                 background-color:white;
                 display:flex;
-                justify-content:center;
                 align-items:center;
+                justify-content:flex-start;
                 border-bottom:solid 3px black;
             }
             .name{
@@ -34,7 +28,6 @@
                 display:flex;
                 width:60%;
                 justify-content:flex-end;
-               
             }
             .menu{
                 font-size:22px;
@@ -43,183 +36,80 @@
             .m2{
                 margin-right:52px;
             }
-            .banner{
-                width:100%;
-            }
             .title{
-                display:flex;
-                margin-right:62px;
-                margin-left:62px;
-                align-items:center;
+                font-size:28px;font-weight:bold;
+                margin-left:40px;
+                margin-top:46px;
             }
-            .pic{
-                width:22%; height:22%;
-                margin-left:42px;
-                padding:52px 112px 52px 42px;
-            }
-            .titleword{
-                font-size:32px;font-weight:normal;
-                line-height:180%;
-            }
-            .work{
+            .aboutandpic{
                 width:100%;
-                height:452px;
                 display:flex;
-                overflow-x: scroll;
-                flex-direction: row;
-                margin:82px 0px 82px 0px;
-            }
-            .work img{
-                flex:auto;
-                max-width: 100%;
-                max-height: 100%;
-                margin:0px 20px 0px 42px;
-            }
-            .underline{
-                height:3px;
-                background-color:black;
-                margin-right:62px;
-                margin-left:62px;
+                justify-content:center;
+                align-self:flex-start;
+                position: relative;
             }
             .aboutme{
-                margin:102px 62px 62px 0px;
-                border-top:solid 3px black;
-                background-color:black;
-                padding:62px 62px 62px 62px;
-                opacity:0.85;
-                width:72%;
-            }
-            .title2{
-                font-size:32px;font-weight:bold;color:white;
-                margin-left:24px;
+                margin-top:52px;
+                width:62%;height:auto;
+                background-color: #F2F2F2;
+                border:solid 2px black;
+                position: relative;
             }
             .content{
-                margin:62px 42px 0px 304px;
-                font-size:22px;color:white;
-                line-height:260%;
+                font-size:22px;
+                line-height:220%; 
+                padding:62px 77px 42px 77px;
+            } 
+            .pic{
+                width:18%;height:18%;
+                margin:52px 0px 0px 72px;
             }
-            .more{
-                margin-left:100%;
-                margin-top:-12px;
-                background-color:#565656;
-                padding:8px 36px 8px 24px;
-                width:100px;
-                font-size:24px;font-weight:bold;color:white;
+            .keyword{
+                font-weight:bold;
+                line-height:88px;
             }
-            .contact{
-                margin:62px 0px 24px 0px;
-                padding-right:24px;
-                display:flex;
-                justify-content:flex-end;
-               
-            }
-            .phone{
-                font-size:26px;font-weight:bold;
-                padding-right:12px;
-            }
-            .mail{
-                align-self:center;
-                margin-top:8px;
-                padding-left:24px;
-            }
-            .mailadress{
-                padding-left:12px;
-                font-size:17px;
-            }
-            .line{
-                width:100%;height:20px;
-                background-color:black;
-            }
-
             #menu:hover{
                 font-weight:bold;
             }
 
 
-
-        @media (max-width:1024px){ /*螢幕小於1024px時，會進行以下的變動*/
+            /*響應式設計*/
+            @media (max-width:1024px){ /*螢幕小於1024px時，會進行以下的變動*/
             .topnav{
                 height:100px;
                 }
             .name{
                 margin:12px 12px 12px 24px;
+                width:80%;
                 font-size:36px;
+                font-weight:bold;
                 }
             .menu{
                 font-size:18px;
                 margin:12px 42px 12px 12px;    
                 }
             .title{
-                margin-right:36px;
-                margin-left:36px;
-            }
-            .titleword{
-                font-size:26px;
-                line-height:140%;
-                }
-            .content{
-                margin-left:280px;
-                margin-top:62px;
-                font-size:24px;
-                line-height:260%;
-                }
-            .work{
-                height:290px;
-                margin:56px 0px 56px 0px;
-                }
-            .work img{
-                margin:0px 12px 0px 32px;
+                font-size:24px;font-weight:bold;
+                margin-left:32px;
+                margin-top:40px;
             }
             .aboutme{
-                margin:82px 42px 42px 0px;
-                padding:42px 42px 42px 42px;
-                width:72%;
-            }
-            .title2{
-                font-size:26px;
-                margin-left:24px;
+                margin-top:36px;
             }
             .content{
-                margin:42px 32px 0px 180px;
-                font-size:18px;
-                line-height:240%;
-            }
-            .more{
-                margin-left:98%;
-                margin-top:-12px;
-                padding:8px 24px 8px 20px;
-                width:80px;
                 font-size:20px;
-            }
+                line-height:200%; 
+                padding:36px 52px 26px 52px;
+            } 
             .pic{
-                padding:42px 66px 42px 12px;
+                margin:36px 0px 0px 56px;
             }
-            .contact{
-                margin:42px 0px 20px 0px;
-                padding:20px;
+            .keyword{
+                line-height:42px;
             }
-            .phone{
-                font-size:22px;
-                padding-right:10px;
-            }
-            .number{
-                font-size:14px;
-            }
-            .mail{
-                padding-left:20px;
-            }
-            .mail img{
-                width:22px;
-            }
-            .mailadress{
-                padding-left:10px;
-                font-size:15px;
-                
             }
 
-        }
-
-        @media (max-width:768px){ /*螢幕小於768px時，會進行以下的變動*/
+            @media (max-width:768px){ /*螢幕小於768px時，會進行以下的變動*/
             .topnav{
                 height:80px;
                 border-bottom:solid 2px black;
@@ -228,83 +118,34 @@
                 margin:12px 6px 12px 24px;
                 width:40%;
                 font-size:30px;
-                font-weight:bold;
                 }
             .menu{
                 font-size:14px;
                 margin:12px 42px 12px 0px;    
                 }
             .title{
-                margin-right:32 px;
-                margin-left:32px;
+                font-size:20px;
+                margin-left:24px;
+                margin-top:32px;
             }
-            .titleword{
-                padding:13px;
-                font-size:18px;
-                line-height:160%;
-                }
-            .work{
-                height:200px;
-                margin:32px 14px 32px 14px;
-                }
-            .work img{
-                margin:4px 14px 4px 0px;
-                }
             .aboutme{
-                margin:62px 0px 22px 0px;
-                padding:28px 22px 22px 12px;
-                width:80%;
-            }
-            .title2{
-                font-size:22px;
-                margin-left:14px;
+                margin-top:28px;
             }
             .content{
-                margin:22px 12px 0px 110px;
                 font-size:16px;
-                line-height:210%;
-            }
-            .more{
-                margin-left:96%;
-                margin-top:-12px;
-                padding:6px 0px 6px 18px;
-                width:80px;
-                font-size:18px;
-            }
+                line-height:180%; 
+                padding:28px 32px 18px 32px;
+            } 
             .pic{
-                width:24%; height:24%;
-                margin-left:22px;
-                padding:32px 36px 32px 4px;
+                width:22%;height:22%;
+                margin:28px 0px 0px 28px;
             }
-            .contact{
-                margin:32px 0px 10px 0px;
-                padding-right:10px;
+            .keyword{
+                line-height:28px;
             }
-            .phone{
-                font-size:16px;
-                padding-right:8px;
             }
-            .number{
-                font-size:12px;
-            }
-            .mail{
-                padding-left:16px;
-            }
-            .mail img{
-                width:16px;
-            }
-            .mailadress{
-                padding-left:8px;
-                font-size:12px;
-            }
-            .underline{
-                height:2px;
-                margin-right:32px;
-                margin-left:32px;
-            }
-        }
 
-        @media (max-width:320px){ /*螢幕小於320px時，會進行以下的變動*/
+            @media (max-width:320px){ /*螢幕小於320px時，會進行以下的變動*/
             .topnav{
                 height:60px;
                 border-bottom:solid 2px black;
@@ -319,130 +160,50 @@
                 margin:8px 24px 8px 2px;    
                 }
             .title{
-                margin-right:22px;
-                margin-left:22px;
-            }
-            .titleword{
-                padding:8px;
-                font-size:13px;
-                line-height:140%;
-                }
-            .work{
-                height:120px;
-                margin:24px 6px 24px 6px;
-                }
-            .work img{
-                margin:4px 10px 4px 0px;
-                }
-            .underline{
-                height:2px;
-                margin-right:24px;
-                margin-left:24px;
+                font-size:14px;
+                margin-left:18px;
+                margin-top:24px;
             }
             .aboutme{
-                margin:32px 12px 12px 0px;
-                padding:22px 16px 10px 6px;
-                width:78%;
-            }
-            .title2{
-                font-size:14px;
-                margin-left:8px;
+                margin-top:20px;
+                width:86%;height:auto;
             }
             .content{
-                margin:12px 8px 0px 60px;
-                font-size:11px;
-                line-height:200%;
-            }
-            .more{
-                margin-left:94%;
-                margin-top:-8px;
-                padding:3px 0px 3px 12px;
-                width:60px;
-                font-size:14px;
-            }
+                font-size:12px;
+                line-height:160%; 
+                padding:20px 20px 24px 20px;
+            } 
             .pic{
-                width:24%; height:24%;
-                margin-left:0px;
-                padding:16px 14px 16px 4px;
+                display:none;
             }
-            .contact{
-                margin:24px 0px 6px 0px;
-                padding-right:8px;
+            .keyword{
+                line-height:18px;
             }
-            .phone{
-                font-size:6px;
-                padding-right:2px;
             }
-            .number{
-                font-size:6px;
-            }
-            .mail{
-                padding-left:12px;
-            }
-            .mail img{
-                width:14px;
-            }
-            .mailadress{
-                font-size:6px;
-                padding-left:2px;
-            }
-        }
         </style>
-        <script>
-
-        </script>
     </head>
+    
     <body>
         <div class="topnav">
-            <div class="name">Lily</div>
+            <!--使用JavaScript的DOM(Document Object Model)，對Window和其属性Location的操作，將目前頁面導向到指定的URL(回到首頁)-->
+            <div class="name" onclick="javascript:window.location.href='./index.html'">Lily</div>
             <div class="topmenu">
-                <!--使用JavaScript的DOM(Document Object Model)，對Window和其属性Location的操作，將目前頁面導向到指定的URL(到作品集)-->
+                 <!--使用JavaScript的DOM(Document Object Model)，對Window和其属性Location的操作，將目前頁面導向到指定的URL(到作品集)-->
                 <div class="menu m1" id="menu" onclick="javascript:window.location.href='./portfolio.html'">作品集</div>
-                <!--使用JavaScript的DOM(Document Object Model)，對Window和其属性Location的操作，將目前頁面導向到指定的URL(到關於我)-->
-                <div class="menu m2" id="menu" onclick="javascript:window.location.href='./aboutme.html'">關於我</div>
+                <div class="menu m2" id="menu">關於我</div>
             </div>
         </div>
-        <div class="banner">
-            <img src="pic/banner.png" width=100% > 
+        <div class="title">· 關於我</div>
+        <div class="aboutandpic">
+             <div class="aboutme">
+                <div class="content">
+                    &emsp;&emsp;大學就讀於銘傳的資訊傳播學系，畢業後雖於其他領域就職，但由於我對設計抱有濃厚的興趣，便開始自學了<b>AI</b>及<b>PS</b>，工作之餘經常幫朋友做排版與繪圖設計，因此產生了轉換跑道的想法，在這過程中，我接觸到了<b>UI/UX</b>，那些看似簡單的介面，其實蘊藏了很多理論與想法，讓我非常的感興趣且好奇，於是我開始自學<b>UI/UX</b>和<b>基礎前端語言</b>。
+                    <div>&emsp;&emsp;我是位同理心強的人，在團體中常扮演著協調者的角色，能夠好好傾聽大家的意見，擁有好勝心、責任感及創造力，對於託付給我的任務會全力應對，努力達成對方的期待。</div>
+                    <div class="keyword">&emsp;&emsp;雖然沒有相關工作經驗，但我學習了很多，也不害怕挑戰。</div>
+                </div>
+             </div>
+             <img class="pic" src="pic/pic.png">
+             
         </div>
-
-        <div class="title">
-            <img class="pic" src="pic/pic.png">
-            <div class="titleword">您好，我是Lily，擁有平面及UI設計能力，<br>
-            我擅長與人溝通、處理問題，且學習能力強。</div>
-        </div>
-        <div class="underline"></div>
-        <div class="work">
-            <img src="pic/work1.png">
-            <img src="pic/work2.png">
-            <img src="pic/work3.png">
-            <img src="pic/work4.png">
-            <img src="pic/work5.png">
-            <img src="pic/work7.png">
-            <img src="pic/work6.png">
-            <img src="pic/work8.png">
-            <img src="pic/work9.png">
-        </div>
-        <div class="underline"></div>
-
-        <div class="aboutme">
-            <div class="title2">關於我</div>
-            <div class="content">大學就讀於銘傳的資訊傳播學系，畢業後雖於其他領域就職，
-                但由於我對設計抱有濃厚的興趣，便開始自學了AI及PS，工作
-                之餘經常幫朋友做排版與繪圖設計，因此產生了轉換跑道的想
-                法，在這過程中，我接觸到了UI/UX......
-            <!--使用JavaScript的DOM(Document Object Model)，對Window和其属性Location的操作，將目前頁面導向到指定的URL(到關於我)-->
-            <div class="more" onclick="javascript:window.location.href='./aboutme.html'">More...</div>
-            </div>
-        </div>
-        <div class="contact">
-            <div style="align-items:center">
-                <span class="phone">T</span>
-                <span class="number">0966710787</span>
-                <span class="mail"><img src="pic/mail.png" width=24px></span>
-                <span class="mailadress">xlepus921@gmail.com</span>
-            </div>
-        </div>
-        <div class="line"></div>
+        <br/><br/><br/>
     </body>
-</html> 
